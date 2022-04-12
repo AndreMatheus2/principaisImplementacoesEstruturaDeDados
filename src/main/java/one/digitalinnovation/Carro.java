@@ -40,13 +40,20 @@ public class Carro implements Comparable<Carro> {
 
 
     //Ordenando lista por tamanho da palavra!
+
+   // @Override
+    //public int compareTo(Carro o) {
+        //if (this.marca.length() < o.marca.length()){
+          //  return -1;
+        //}else if(this.marca.length() > o.marca.length()){
+      //      return 1;
+    //    }
+  //      return 0;
+//    }
+
+    //Ordem alfabetica!
     @Override
     public int compareTo(Carro o) {
-        if (this.marca.length() < o.marca.length()){
-            return -1;
-        }else if(this.marca.length() > o.marca.length()){
-            return 1;
-        }
-        return 0;
+        return this.getMarca().compareTo(o.getMarca());
     }
 }
